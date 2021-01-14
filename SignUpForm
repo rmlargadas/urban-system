@@ -1,8 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Signup Form</title>
+    <style type="text/css">
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        h1{
+          color:black;
+          font-style: normal;
+          font-weight: bold;
+        }
+        body{
+          background: #ff8f7a;
+          font-family: Arial, Helvetica, sans-serif;
+          line-height: 1.6em;
+        }
+        .container{
+          width: 400px;
+          margin:auto;
+          margin-top:50px;
+        }
+        .box-1{
+          background: #ff6565;
+          border: 5px red solid;
+          padding: 20px;
+        }
+        .signupform{
+           padding-right: 20px;
+        }
+        .signupform label{
+          display:block;
+        }
+        .signupform input[type="text"], .signupform input[type="number"], .signupform input[type="email"]{
+          padding: 8px;
+          width:100%;
+        }
+        .signupform input[type="submit"]{
+          background: #8fc1c1;
+          padding: 10px 15px;
+          font-weight: bolder;
+          margin: 10px 0px;
+        }
+        .containerResponse{
+          width: 400px;
+          margin: auto;
+          padding: 20px;
+        }
+        .response{
+          margin-left: 20px;
+
+        }
+    </style>
+    
   </head>
   <body>
     <h2> Sign Up Form </h2>
