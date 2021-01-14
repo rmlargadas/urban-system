@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Signup Form</title>
+  </head>
+  <body>
+    <h2> Sign Up Form </h2>
+
+    <?php
+      $firstName = strip_tags($_POST["firstName"]);
+      $lastName = strip_tags($_POST["lastName"]);
+      $phoneNumber = strip_tags($_POST["phoneNumber"]);
+
+      if(isset($_POST["email"])==true && empty($_POST["email"])==false){
+        $email = strip_tags($_POST["email"]);
+          if (filter_var($email, FILTER_VALIDATE_EMAIL)==false) {
+            echo "Please enter a valid e-mail address.";
+          }
+      }
+     ?>
+
+     <form action="" method="post"><br>
+       First Name:<input type="text" name="firstName" required><br>
+       Last Name: <input type="text" name= "lastName"><br>
+       E-mail: <input type="email" name = "email" required><br>
+       Phone Number: <input type = "number" name="phoneNumber"><br>
+       <input type="submit"><br>
+     </form>
+     <br><br> Congratulations, your information has been submitted!<br>
+     Username:
+     <?php
+       $prefixForUsername = substr($email,0,3);
+       echo uniqid ($prefixForUsername);
+
+       ?>
+
+  </body>
+</html>
